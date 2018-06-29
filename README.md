@@ -31,7 +31,7 @@
 - summoner stuff
 
 #### Match
--
+- up to 10 latest
 -
 
 
@@ -54,3 +54,9 @@ prioritize:
 
 
 firebase deploy?
+
+
+db / backend functionality
+- login?
+- saved summ (default sum aka yours)
+- maybe just session for fav sum, no need for login
