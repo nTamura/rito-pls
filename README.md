@@ -1,4 +1,4 @@
-# ritoPls
+# Sightstone Stats 
 
 # League of Legends stats app
 - Search summoner names
@@ -34,7 +34,6 @@
 - up to 10 latest
 -
 
-
 REQUIREMENTS
 We want to see you build a match history
 (latest matches from the summoner is fine)
@@ -60,3 +59,11 @@ db / backend functionality
 - login?
 - saved summ (default sum aka yours)
 - maybe just session for fav sum, no need for login
+
+
+todo
+- cors
+
+assets
+
+http://leagueoflegends.wikia.com/wiki/Emotes?file=LoL_Facebook_Icon_35.png#Classic

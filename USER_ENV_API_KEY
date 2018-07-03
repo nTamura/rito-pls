@@ -1,0 +1,7 @@
+- create file .env in root
+- create single variable assigned to your API key
+- save, restart your server
+
+  example:
+
+REACT_APP_SECRET="000-000-000"
