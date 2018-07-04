@@ -22,7 +22,6 @@ const HST = 'lol/match/v3/matchlists/by-account/'
 const MCH = 'lol/match/v3/matches/'
 const KEY = `api_key=${API_KEY}`
 const LMT = '?endIndex=5'
-// const LMT = '?endIndex=20'
 
 
 // https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/31870321?endIndex=20&api_key=RGAPI-8ba4263d-8324-4f91-85d7-042162fb131d

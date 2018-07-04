@@ -26,6 +26,15 @@ class SummonerResult extends Component {
     }
   }
 
+  countWins = () => {
+    let wins = ''
+    // for (let match in this.props.matchList) {
+    //   match.filter((m) => {
+    //     return m.matchDetails.participants.
+    //   })
+    // }
+  }
+
   render() {
 
     return (
@@ -79,10 +88,10 @@ class SummonerResult extends Component {
                   Summoner Level: {this.props.summoner.summonerLevel}
                 </CardSubtitle>
                 <hr />
-                <CardText>Winrate from past 10 games</CardText>
+                <CardText>Winrate from past {this.props.matchList.length} games</CardText>
                 <Progress color="info" value={50} />
 
-                <CardText className="text-right">6/12 games won</CardText>
+                <CardText className="text-right">6/{this.props.matchList.length} games won</CardText>
               </CardBody>
             </Card>
           </TabPane>
@@ -105,9 +114,14 @@ class SummonerResult extends Component {
                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
               <CardBody style={styles.cardFont}>
 
-              <CardTitle>3rd itlasdjfasd</CardTitle>
-              <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-              <Button>Go somewhere</Button>
+              <CardTitle>
+                {this.props.league[0].queueType.split('_').join(" ")}
+              </CardTitle>
+              <hr />
+              <CardTitle>
+                { this.props.league[0].tier } {this.props.league[0].rank }
+              </CardTitle>
+              <CardText>{this.props.league[0].leagueName}</CardText>
             </CardBody>
 
             </Card>
