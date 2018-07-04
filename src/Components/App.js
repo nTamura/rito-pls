@@ -47,7 +47,6 @@ class App extends Component {
       const { accountId, id } = summoner.data
       const league = await axios.get(URL+RNK+id+'?'+KEY);
       const matchList = await axios.get(URL+HST+accountId+LMT+'&'+KEY);
-
       let newMatchList = []
 
       for (var match in matchList.data.matches) {
@@ -62,6 +61,38 @@ class App extends Component {
         }
       }
       console.log(newMatchList);
+
+      // var x = newMatchList.filter((match) => {
+      //   match.matchDetails.participantIdentities.player.filter((p) => {
+      //     return summonerName
+      //  })
+      // });
+
+      // for (let team in matchList.teams) {
+      //
+      //   console.log(matchList[match]);
+      //
+      //   let x = matchList.teams[team].filter((t) => {
+      //     if teamId === t.matchDetails.
+      //   })
+      //
+      //   let stats = {}
+      //   const { matchList } = this.props
+      // }
+      // for (let match in matchList) {
+      //
+      //   console.log(matchList[match]);
+      //   let x = match.filter((m) => {
+      //     return m.matchDetails.participantIdentities.player.summonerName == 'itsnixin'
+      //   })
+      // { matchDetails } = this.props.matchList
+      // matchDetails.participantIdentities[0].player.accountId
+      // matchDetails.participantIdentities[0].player.summonerId
+      // matchDetails.participantIdentities[0].player.summonerName
+      //
+      // matchDetails.teams[0].teamId
+      // matchDetails.teams[0].win
+
 
       this.setState({
         summoner: summoner.data,
@@ -81,13 +112,8 @@ class App extends Component {
     //   }, () => this.clearAlert())
     //   console.log(err)
     // }
+    }
   }
-}
-
-
-  // errorMsg = (err) => {
-  //   return err
-  // }
 
   clearAlert = () => {
     setTimeout(() => {

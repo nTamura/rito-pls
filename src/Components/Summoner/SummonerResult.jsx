@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom'
+import _ from 'lodash'
 
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardBody, CardSubtitle, CardImg, Button, CardTitle, CardText, Row, Col, Progress } from 'reactstrap';
 
@@ -21,22 +22,13 @@ class SummonerResult extends Component {
 
   componentWillMount() {
     const params = this.props.match.params.id
-    if (!this.props.summoner) {
+    !this.props.summoner &&
       this.props.getData(params)
-    }
   }
 
-  countWins = () => {
-    let wins = ''
-    // for (let match in this.props.matchList) {
-    //   match.filter((m) => {
-    //     return m.matchDetails.participants.
-    //   })
-    // }
-  }
+  
 
   render() {
-
     return (
       <div className="container">
         { !this.props.summoner ? (
@@ -96,6 +88,9 @@ class SummonerResult extends Component {
             </Card>
           </TabPane>
 
+
+{/*  */}
+
           <TabPane tabId="2">
             <Card style={styles.card}>
               <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
@@ -103,11 +98,25 @@ class SummonerResult extends Component {
 
               <CardTitle>Match History</CardTitle>
               <CardText>Most recent match history </CardText>
+              { this.props.matchList.map((m, i) => {
+                return (
+                  <div>
+
+                  <p>{m.gamemode}</p>
+                  <p>{m.champion}</p>
+                  <p></p>
+                </div>
+
+                )
+
+              })}
               <Button></Button>
             </CardBody>
 
             </Card>
           </TabPane>
+
+{/*  */}
 
           <TabPane tabId="3">
             <Card style={styles.card}>
