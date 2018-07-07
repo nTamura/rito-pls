@@ -10,7 +10,8 @@ class SummonerResult extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: '1'
+      activeTab: '1',
+      winRate: 0
     };
   }
 
@@ -20,13 +21,19 @@ class SummonerResult extends Component {
     }
   }
 
+  calculateWinRate = (x) => {
+    let winRate = x / this.props.matchList.length
+    this.setState({ winRate });
+  }
+
   componentWillMount() {
     const params = this.props.match.params.id
     !this.props.summoner &&
       this.props.getData(params)
+
   }
 
-  
+
 
   render() {
     return (

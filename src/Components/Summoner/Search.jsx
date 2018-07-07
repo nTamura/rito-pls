@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
-import { Card, CardImg, CardText, CardBody,InputGroup, InputGroupAddon,FormFeedback,
+import { Alert, Card, CardImg, CardText, CardBody,InputGroup, InputGroupAddon,FormFeedback,
   CardTitle, CardSubtitle, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import karthus from '../../../src/img/karthus.png';
 
@@ -66,6 +66,14 @@ class Search extends Component {
 
           </CardBody>
         </Card>
+
+        {
+          this.props.triggerAlert &&
+          <Alert color="warning" style={styles.alert}>
+            {this.props.error.status.status_code} - {this.props.error.status.message}
+          </Alert>
+        }
+
         { this.props.summoner &&
           <Redirect to={{
             pathname: `/summoner/${this.props.summoner.name}`,
@@ -80,7 +88,10 @@ class Search extends Component {
 }
 
 const styles={
-
+  alert: {
+    marginTop: 20,
+    textAlign: 'center'
+  },
   card:{
     backgroundColor: '#0e2a40',
     borderColor: '#0e2a40'

@@ -13,7 +13,7 @@ import SummonerResult from './Summoner/SummonerResult.jsx';
 import Search from './Summoner/Search.jsx';
 import Match from './Summoner/Match.jsx';
 
-const API_KEY = 'RGAPI-8ba4263d-8324-4f91-85d7-042162fb131d'
+const API_KEY = 'RGAPI-9b4c4b53-0420-4917-8711-36c3c1fd8afa'
 // const API_KEY = process.env.REACT_APP_SECRET
 const URL = 'https://na1.api.riotgames.com/'
 const SUM = 'lol/summoner/v3/summoners/by-name/'
@@ -47,20 +47,33 @@ class App extends Component {
       const { accountId, id } = summoner.data
       const league = await axios.get(URL+RNK+id+'?'+KEY);
       const matchList = await axios.get(URL+HST+accountId+LMT+'&'+KEY);
+      // const { matches } = matchlist.data
       let newMatchList = []
 
-      for (var match in matchList.data.matches) {
+//  go through all matches
+      for (let match in matchList.data.matches) {
         let gameId = matchList.data.matches[match].gameId
         let matchDetails = await axios.get(URL+MCH+gameId+'?'+KEY);
 
+// push match details to each match
         if (gameId === matchDetails.data.gameId) {
           let result = _.setWith(matchList.data.matches[match],
             'matchDetails', matchDetails.data, Object
           )
-          newMatchList.push(result)
+
+          let summonerStats = {
+            champion: matchList.data.matches[match].championId,
+            participant: matchList.data.matches[match].participants.filter((matchList.data.matches[match].championId === matchList.data.matches[match].championId)),
+          }
+
+          summonerStats = _.setWith(matchList.data.matches[match])
+          newMatchList.push(result, summonerStats)
         }
       }
       console.log(newMatchList);
+
+
+      // match.champion === matchDetails.participants[].championId
 
       // var x = newMatchList.filter((match) => {
       //   match.matchDetails.participantIdentities.player.filter((p) => {
@@ -105,14 +118,18 @@ class App extends Component {
       if (err.response) {
         // error handling for forbidden (new api key)
        console.log(err.response.data);
+       console.log(err.response.data.status.status_code);
      }
-    //   this.setState({
-    //     error: err.response.data,
-    //     triggerAlert: true
-    //   }, () => this.clearAlert())
-    //   console.log(err)
-    // }
+      this.setState({
+        error: err.response.data,
+        triggerAlert: true
+      }, () => this.clearAlert())
+      console.log(err)
     }
+  }
+
+  createMatchHistory = (v) => {
+
   }
 
   clearAlert = () => {
