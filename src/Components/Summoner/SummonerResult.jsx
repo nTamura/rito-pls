@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import { Link } from 'react-router-dom'
-import _ from 'lodash'
+// import { Link } from 'react-router-dom'
+// import _ from 'lodash'
 
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardBody, CardSubtitle, CardImg, Button, CardTitle, CardText, Row, Col, Progress } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardBody, CardSubtitle, CardImg, Button, CardTitle, CardText, Progress } from 'reactstrap';
 
 
 class SummonerResult extends Component {

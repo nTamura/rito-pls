@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import axios from 'axios'
 import './App.css';
 import _ from 'lodash'
@@ -11,7 +11,7 @@ import Navigation from './Navbar/Navigation.jsx';
 
 import SummonerResult from './Summoner/SummonerResult.jsx';
 import Search from './Summoner/Search.jsx';
-import Match from './Summoner/Match.jsx';
+// import Match from './Summoner/Match.jsx';
 
 const API_KEY = 'RGAPI-9b4c4b53-0420-4917-8711-36c3c1fd8afa'
 // const API_KEY = process.env.REACT_APP_SECRET

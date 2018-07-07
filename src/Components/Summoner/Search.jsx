@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect, Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-solid-svg-icons'
-import { Alert, Card, CardImg, CardText, CardBody,InputGroup, InputGroupAddon,FormFeedback,
-  CardTitle, CardSubtitle, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import karthus from '../../../src/img/karthus.png';
+import { Redirect } from 'react-router-dom'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { Alert, Card, CardText, CardBody,InputGroup, InputGroupAddon,FormFeedback, CardTitle, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+// import karthus from '../../../src/img/karthus.png';
 
 class Search extends Component {
   constructor(props) {

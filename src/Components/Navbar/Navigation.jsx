@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
 
 import { Navbar,
-  NavbarToggler,
+  // NavbarToggler,
   NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 class Navigation extends Component {

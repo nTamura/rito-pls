@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
-import karthus from '../../../src/img/karthus.png';
+import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+// import karthus from '../../../src/img/karthus.png';
 
 class Main extends Component {
 
