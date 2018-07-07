@@ -13,8 +13,8 @@ import SummonerResult from './Summoner/SummonerResult.jsx';
 import Search from './Summoner/Search.jsx';
 // import Match from './Summoner/Match.jsx';
 
-const API_KEY = 'RGAPI-9b4c4b53-0420-4917-8711-36c3c1fd8afa'
-// const API_KEY = process.env.REACT_APP_SECRET
+// const API_KEY = 'RGAPI-9b4c4b53-0420-4917-8711-36c3c1fd8afa'
+const API_KEY = process.env.REACT_APP_SECRET
 const URL = 'https://na1.api.riotgames.com/'
 const SUM = 'lol/summoner/v3/summoners/by-name/'
 const RNK = 'lol/league/v3/positions/by-summoner/'
@@ -115,16 +115,17 @@ class App extends Component {
 
 
     } catch (err) {
+      console.log(err);
       if (err.response) {
         // error handling for forbidden (new api key)
        console.log(err.response.data);
        console.log(err.response.data.status.status_code);
-     }
-      this.setState({
-        error: err.response.data,
-        triggerAlert: true
-      }, () => this.clearAlert())
-      console.log(err)
+        this.setState({
+          error: err.response.data,
+          triggerAlert: true
+        }, () => this.clearAlert())
+        console.log(err)
+      }
     }
   }
 
