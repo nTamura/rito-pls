@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
-
 class Splash extends Component {
-
   render() {
     return (
       <div style={styles.container}>
@@ -21,7 +19,6 @@ const styles={
     // margin: '0 auto'
   },
   form: {
-
   }
 }
 
