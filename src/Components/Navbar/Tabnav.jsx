@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import { Link } from 'react-router-dom'
-
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardBody, CardSubtitle, CardImg, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 
 
