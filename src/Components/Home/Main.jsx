@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
-// import karthus from '../../../src/img/karthus.png';
 
 class Main extends Component {
 
