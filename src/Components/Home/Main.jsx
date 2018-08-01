@@ -5,7 +5,6 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 class Main extends Component {
-
   render() {
     return (
       <div className="container">
@@ -25,7 +24,6 @@ class Main extends Component {
             </Button>
           </CardBody>
         </Card>
-
     </div>
     );
   }
