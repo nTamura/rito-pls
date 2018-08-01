@@ -8,7 +8,9 @@ class Splash extends Component {
     return (
       <div style={styles.container}>
         <h3>Splash screen</h3>
-        <p>Rito PLS is a mobile League of Legends stats PWA created with React. </p>
+        <p>
+          Rito PLS is a mobile League of Legends stats PWA created with React.
+        </p>
       </div>
     );
   }
