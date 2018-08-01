@@ -6,7 +6,6 @@ body {
   /* color: #87a3b0 !important; */
 }
 
-
 .brand {
   font-family: 'Ubuntu', sans-serif;
   color: #55c6ce !important;
@@ -22,10 +21,8 @@ html, body > #root {
 
 /*
 background #0b2234
-
 primary #0e2a40
 seondary #1e7c86
-
 font #55c6ce
 secondary font #87a3b0
 
