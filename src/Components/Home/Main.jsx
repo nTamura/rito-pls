@@ -17,7 +17,7 @@ class Main extends Component {
             </CardTitle>
             <CardSubtitle>Summoner Statistics</CardSubtitle>
             <hr />
-            <CardText className="text-left" >Sightstone is a League of Legends Summoner lookup that provides summoner overview, ranked info and match history.</CardText>
+            <CardText className="text-left" >Sightstone is a mobile-first League of Legends Summoner lookup PWA that provides summoner overview, ranked info and match history.</CardText>
             <hr />
             <Button outline color="info">
               <Link to="/search" style={styles.link}>
